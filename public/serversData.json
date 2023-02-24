@@ -1,0 +1,62 @@
+[
+    {
+        "service_id": "1",
+        "place": "Eiffel Tower",
+        "country": "France",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM2BrdlyEBcrV0xZqE9tbAGe1rufOfLqa-eqXVVn6J&s",
+        "rating": "5",
+        "price": "300",
+        "desc": "The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower. Locally nicknamed `La dame de fer`, it was constructed from 1887 to 1889 as the centerpiece of the 1889 World's Fair. ",
+        "review": "12"
+    },
+    {
+        "service_id": "2",
+        "place": "Cox's Bazar",
+        "country": "Bangladesh",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Cox%27s_Bazaar_Sunset_Sep2019.jpg",
+        "rating": "4.5",
+        "price": "200",
+        "desc": "Cox’s Bazar is a town on the southeast coast of Bangladesh. It’s known for its very long, sandy beachfront, stretching from Sea Beach in the north to Kolatoli Beach in the south. Aggameda Khyang monastery is home to bronze statues and centuries-old Buddhist manuscripts. South of town, the tropical rainforest of Himchari National Park has waterfalls and many birds. North, sea turtles breed on nearby Sonadia Island.",
+        "review": "10"
+    },
+    {
+        "service_id": "3",
+        "place": "kashmir",
+        "country": "India",
+        "img": "https://www.newsclick.in/sites/default/files/2019-03/azad%20kashmir11.jpg",
+        "rating": "4.2",
+        "price": "150",
+        "desc": "Kashmir is the northernmost geographical region of the Indian subcontinent. Until the mid-19th century, the term /Kashmir denoted only the Kashmir Valley between the Great Himalayas and the Pir Panjal Range.",
+        "review": "8"
+    },
+    {
+        "service_id": "4",
+        "place": "Rhine Falls",
+        "country": "Swizerland",
+        "img": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRYLqIJZ3ke22iXdyBl8bG6LDJLnwbA3T89xRuPdvsM4DziGBvxyvDoQOzX1QOVQWsid9M7o5EC__eFtPrJNPKsrQ",
+        "rating": "4.4",
+        "price": "200",
+        "desc": "The Rhine Falls is a waterfall located in Switzerland and the most powerful waterfall in Europe. The falls are located on the High Rhine on the border between the cantons of Schaffhausen and Zürich, between the municipalities of Neuhausen am Rheinfall and Laufen-Uhwiesen/Dachsen, next to the town of Schaffhausen in northern Switzerland. They are 150 metres wide and 23 metres high. In the winter months, the average water flow is 250 m³/s, while in the summer, the average water flow is 600 m³/s. The highest flow ever measured was more than 1250m³/s in 1999, previous to that the record was 1,250 cubic metres per second in 1965; and the lowest, 95 cubic metres per second in 1921. ",
+        "review": "5"
+    },
+    {
+        "service_id": "5",
+        "place": "Tower Bridge",
+        "country": "London",
+        "img": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQDSw-HDx9rnQ4pw0tpBXE7a5JBC_8fz-SrMYoouPrqEDUeG0nomiWwjNZiqdHJ71Vgmh4vQ7J_z5hUHg1CNwtvAA",
+        "rating": "4.9",
+        "price": "300",
+        "desc": "Tower Bridge is a Grade I listed combined bascule and suspension bridge in London, built between 1886 and 1894, designed by Horace Jones and engineered by John Wolfe Barry with the help of Henry Marc Brunel. It crosses the River Thames close to the Tower of London and is one of five London bridges owned and maintained by the Bridge House Estates, a charitable trust founded in 1282. The bridge was constructed to give better access to the East End of London, which had expanded its commercial potential in the 19th century. The bridge was opened by Edward, Prince of Wales and Alexandra, Princess of Wales in 1894.",
+        "review": "15"
+    },
+    {
+        "service_id": "6",
+        "place": " Alesund",
+        "country": "Norway",
+        "img": "https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2017/12/Hand-Luggage-Only-10-2.jpg?resize=1280%2C848&ssl=1",
+        "rating": "5",
+        "price": "250",
+        "desc": "There are so many best places in Norway to visit. I mean, you’ve got the Troms region in the very north, Alesund on the west coast and lovely little places like Flåm that are nestled deep in the mountains.",
+        "review": "11"
+    }
+]

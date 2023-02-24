@@ -23,7 +23,7 @@ const slides = [
         heading: 'lorem ipsum',
         description:
             'loIpsum dolores ipsum est sanctus dolore. Justo ipsum magna sit sit sed et, elitr dolor tempor dolores eos invidunt sanctus.',
-        btnText: 'Get Started',
+
     },
     {
         picture: img6,
@@ -31,7 +31,7 @@ const slides = [
         heading: 'lorem ipsum',
         description:
             'loIpsum dolores ipsum est sanctus dolore. Justo ipsum magna sit sit sed et, elitr dolor tempor dolores eos invidunt sanctus.',
-        btnText: 'Get Started',
+
     },
     // {
     //     picture: "https://insiderion.com/wp-content/uploads/2020/03/Mehjabin-Chowdhury-recent-photo.jpg",

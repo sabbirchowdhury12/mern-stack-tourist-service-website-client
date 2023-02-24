@@ -1,9 +1,9 @@
 import React from 'react';
-import '../../styles/Hero.css';
+
 
 
 const SingleSlide = ({ slide }) => {
-    const { picture, subHeading, heading, description, btnText } = slide;
+    const { picture, subHeading, heading, description, } = slide;
     return (
         <div className='carousel-item relative w-full'>
             <div
@@ -18,7 +18,7 @@ const SingleSlide = ({ slide }) => {
                             {heading}
                         </h1>
                         <p className='mb-5 text-base'>{description}</p>
-                        <button btnText={btnText} destination='/about'></button>
+                        <button destination='/about'></button>
                     </div>
                 </div>
             </div>
