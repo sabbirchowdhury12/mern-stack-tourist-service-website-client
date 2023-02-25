@@ -1,14 +1,12 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../../styles/Custom.css';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 
 const ServiceCard = ({ service }) => {
 
-    const { pathname } = useLocation();
-
-    const { country, desc, price, rating, review, place, img } = service;
+    const { country, desc, price, rating, review, place, img, _id } = service;
     return (
         <div class="antialiased bg-gray-200 text-gray-900 font-sans p-6">
             <div class="container mx-auto">
@@ -42,13 +40,16 @@ const ServiceCard = ({ service }) => {
                                 </span>
                             </div>
                             <div class="p-4 flex items-center text-sm text-gray-600">
-                                <button className='bg-secondary p-2 rounded-sm text-center inline-block w-full'>View Details</button>
+                                <Link to={`/service/${_id}`}>
+                                    <button className='bg-secondary p-2 rounded-sm text-center inline-block w-full'>View Details</button>
+
+                                </Link>
                             </div>
                         </span>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
