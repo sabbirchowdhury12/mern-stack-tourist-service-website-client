@@ -24,7 +24,7 @@ const Navbar = () => {
     ];
     return (
         <nav className="w-full bg-white shadow">
-            <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+            <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8 z-10">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
                         <Link to='/'>
@@ -73,7 +73,7 @@ const Navbar = () => {
                         className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"
                             }`}
                     >
-                        <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+                        <ul className=" items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                             {
                                 menu.map((m, ind) => {
                                     return (
@@ -81,7 +81,7 @@ const Navbar = () => {
                                             isActive ? "navStyle" : "navTextStyle"
                                         } to={m.path}
 
-                                        >{m.name}</NavLink>
+                                        ><span className='block mt-5 md:mt-0'>{m.name}</span></NavLink>
                                     );
                                 })
                             }

@@ -11,7 +11,8 @@ const Service = () => {
         axios.get(`${allServices}`)
             .then((response) => setServices(response.data));
     }, []);
-    console.log(services);
+
+
     return (
         <div className='my-10 '>
             <p>All service</p>

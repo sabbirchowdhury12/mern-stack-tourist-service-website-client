@@ -4,6 +4,8 @@ import Blog from "../Pages/Blog/Blog";
 import Contact from "../Pages/Contact/Contact";
 import Home from "../Pages/Home/Home";
 import Service from "../Pages/Service/Service";
+import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
+import { serviceDetails } from "../utilities/APIRoutes";
 
 export const router = createBrowserRouter([
     {
@@ -29,7 +31,12 @@ export const router = createBrowserRouter([
             {
                 path: '/services',
                 element: <Service />
-            }
+            },
+            {
+                path: '/service/:id',
+                loader: async ({ params }) => fetch(`${serviceDetails}/${params.id}`),
+                element: <ServiceDetails />
+            },
         ]
     }
 ]);
