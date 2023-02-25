@@ -17,7 +17,7 @@ const ServiceCard = ({ service }) => {
                         <span href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
                             <div class="relative pb-48 overflow-hidden">
                                 <PhotoProvider>
-                                    <PhotoView src="/1.jpg">
+                                    <PhotoView src={img}>
                                         <img class="absolute inset-0 h-full w-full object-cover" src={img} alt="" />
                                     </PhotoView>
                                 </PhotoProvider>
