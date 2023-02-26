@@ -19,10 +19,6 @@ const Login = () => {
                 toast.success('register done');
             }).catch(err => {
                 console.log(err);
-                console.log(err.Firebase);
-                if (err.match("wrong-password")) {
-                    console.log('ok');
-                }
                 toast.error('register failed');
             });
     };

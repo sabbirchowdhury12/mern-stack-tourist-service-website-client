@@ -1,8 +1,17 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 
 const Navbar = () => {
+
+    const { user, logout } = useContext(AuthContext);
     const [navbar, setNavbar] = useState(false);
+
+    const handleLogout = () => {
+        logout();
+    };
+
+    console.log(user);
 
     const menu = [
         {
@@ -85,13 +94,21 @@ const Navbar = () => {
                                     );
                                 })
                             }
+                            {
+                                user && user.uid &&
+                                <NavLink className={({ isActive }) =>
+                                    isActive ? "navStyle" : "navTextStyle"} to='/contact'><span className='block mt-5 md:mt-0'>Service</span></NavLink>
+                            }
                         </ul>
                     </div>
                 </div>
                 <div className={`items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 pb-4  md:pb-0 font-bold text-xs ${navbar ? "block" : "hidden"
                     }`}>
-                    <Link to='/register'> <button>Login or Sign Up</button></Link>
-
+                    {
+                        user && user.uid ?
+                            <button onClick={handleLogout}>Logout</button> :
+                            <Link to='/register'> <button>Login or Sign Up</button></Link>
+                    }
                 </div>
             </div>
         </nav>
