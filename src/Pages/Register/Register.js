@@ -2,33 +2,26 @@ import React, { useContext, useState } from 'react';
 import { useForm } from "react-hook-form";
 import { toast } from 'react-hot-toast';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
+import useImage from '../../hooks/useImage';
+import imageHost from '../../utilities/imageHost';
 
 const Register = () => {
 
     const { createUserWithEmail, updateUser } = useContext(AuthContext);
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const [image, setImage] = useState(null);
+    const [file, setFile] = useState(null);
+    const image = useImage(file);
+    console.log(image);
+    const navigate = useNavigate();
+
 
     const handleSignUp = (data) => {
         const { name, email, file, password } = data;
 
-        //image host 
-        const img = file[0];
-        const formData = new FormData();
-        formData.append('image', img);
-        const url = 'https://api.imgbb.com/1/upload?key=8fd3dbe5918be63ad82f01b3fb69d14a';
-        fetch(url, { method: 'POST', body: formData })
-            .then(res => res.json())
-            .then(imgData => {
-
-                if (imgData.success) {
-                    const profile = imgData.data.url;
-                    setImage(profile);
-                }
-            });
-
+        //image host
+        setFile(file);
         //create user
         if (image) {
             createUserWithEmail(email, password)
@@ -42,6 +35,7 @@ const Register = () => {
                     updateUser(userInfo)
                         .then(result => { }).catch(err => console.log(err));
                     toast.success('register done');
+                    navigate('/');
                 }).catch(err => toast.error('register failed'));
         }
 

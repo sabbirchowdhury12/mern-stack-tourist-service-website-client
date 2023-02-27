@@ -98,7 +98,7 @@ const Navbar = () => {
                                 <>
                                     <NavLink to="/myreview" className={({ isActive }) =>
                                         isActive ? "navStyle" : "navTextStyle"} ><span className='block mt-5 md:mt-0' >My Review</span></NavLink>
-                                    <NavLink to='/addservice' className={({ isActive }) =>
+                                    <NavLink to='/addService' className={({ isActive }) =>
                                         isActive ? "navStyle" : "navTextStyle"} ><span className='block mt-5 md:mt-0'>Add Service</span></NavLink>
                                 </>
                             }
