@@ -27,11 +27,11 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/contact',
-                element: <blog />
+                element: <Blog />
             },
             {
                 path: '/blog',
-                element: <blog />
+                element: <Blog />
             },
             {
                 path: '/services',

@@ -5,7 +5,7 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import useImage from '../../hooks/useImage';
-import imageHost from '../../utilities/imageHost';
+
 
 const Register = () => {
 
