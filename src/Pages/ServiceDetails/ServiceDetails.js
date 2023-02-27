@@ -10,7 +10,7 @@ const ServiceDetails = () => {
     return (
         <div>
             <ServiceDetailSection service={service} />
-            <ServiceReviewSection />
+            <ServiceReviewSection service={service} />
         </div>
     );
 };

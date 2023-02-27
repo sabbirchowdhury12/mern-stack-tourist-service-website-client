@@ -11,8 +11,6 @@ const Navbar = () => {
         logout();
     };
 
-    console.log(user);
-
     const menu = [
         {
             name: 'Home',
@@ -29,7 +27,8 @@ const Navbar = () => {
         {
             name: 'Contact',
             path: '/contact'
-        }
+        },
+
     ];
     return (
         <nav className="w-full bg-white shadow">
@@ -96,8 +95,12 @@ const Navbar = () => {
                             }
                             {
                                 user && user.uid &&
-                                <NavLink className={({ isActive }) =>
-                                    isActive ? "navStyle" : "navTextStyle"} to='/contact'><span className='block mt-5 md:mt-0'>Service</span></NavLink>
+                                <>
+                                    <NavLink to="/myreview" className={({ isActive }) =>
+                                        isActive ? "navStyle" : "navTextStyle"} ><span className='block mt-5 md:mt-0' >My Review</span></NavLink>
+                                    <NavLink to='/addservice' className={({ isActive }) =>
+                                        isActive ? "navStyle" : "navTextStyle"} ><span className='block mt-5 md:mt-0'>Add Service</span></NavLink>
+                                </>
                             }
                         </ul>
                     </div>

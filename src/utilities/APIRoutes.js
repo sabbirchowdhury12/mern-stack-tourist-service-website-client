@@ -4,3 +4,6 @@ export const allServices = `${host}/allServices`;
 export const serviceDetails = `${host}/serviceDetails`;
 export const addReview = `${host}/addReview`;
 export const allReview = `${host}/allReview`;
+export const myReview = `${host}/myReview`;
+export const deleteReview = `${host}/deleteReview`;
+export const updateReview = `${host}/updateReview`;

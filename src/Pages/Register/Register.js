@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from "react-hook-form";
 import { toast } from 'react-hot-toast';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
@@ -7,39 +7,47 @@ import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
 const Register = () => {
 
-    const { createUserWithEmail } = useContext(AuthContext);
-
-
+    const { createUserWithEmail, updateUser } = useContext(AuthContext);
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const [image, setImage] = useState(null);
 
     const handleSignUp = (data) => {
         const { name, email, file, password } = data;
-        // console.log(name, email, file, password);
 
-        createUserWithEmail(email, password)
-            .then(result => {
-                const user = result.user;
-                console.log(user);
-                toast.success('register done');
-            }).catch(err => {
-                console.log(err);
-                toast.error('register failed');
+        //image host 
+        const img = file[0];
+        const formData = new FormData();
+        formData.append('image', img);
+        const url = 'https://api.imgbb.com/1/upload?key=8fd3dbe5918be63ad82f01b3fb69d14a';
+        fetch(url, { method: 'POST', body: formData })
+            .then(res => res.json())
+            .then(imgData => {
+
+                if (imgData.success) {
+                    const profile = imgData.data.url;
+                    setImage(profile);
+                }
             });
 
-        // const img = data.file[0];
-        // const formData = new FormData();
-        // formData.append('image', img);
-        // const url = 'https://api.imgbb.com/1/upload?key=8fd3dbe5918be63ad82f01b3fb69d14a';
+        //create user
+        if (image) {
+            createUserWithEmail(email, password)
+                .then(result => {
+                    console.log(image);
+                    const userInfo = {
+                        displayName: name,
+                        photoURL: image
+                    };
+                    //update user
+                    updateUser(userInfo)
+                        .then(result => { }).catch(err => console.log(err));
+                    toast.success('register done');
+                }).catch(err => toast.error('register failed'));
+        }
 
-        // fetch(url, {
-        //     method: 'POST',
-        //     body: formData
-        // })
-        //     .then(res => res.json())
-        //     .then(imgData => console.log(imgData));
-
-        // console.log(img);
     };
+
+
     return (
         <div className="font-sans antialiased bg-grey-lightest">
             <div className="w-full bg-grey-lightest pt-10">
@@ -57,14 +65,14 @@ const Register = () => {
                                         })}
                                         className="appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="first_name" type="text" placeholder="Your first name" />
                                 </div>
-                                {/* <div className="w-full md:w-1/2 ml-1">
+                                <div className="w-full md:w-1/2 ml-1">
                                     <label className="block text-grey-darker text-sm font-bold mb-2" htmlFor="last_name">Upload  Profile</label>
                                     <input
                                         {...register("file", {
                                             required: "file is Required"
                                         })}
                                         className="appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="last_name" type="file" placeholder="Your last name" />
-                                </div> */}
+                                </div>
                             </div>
 
 

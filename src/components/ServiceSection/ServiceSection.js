@@ -11,7 +11,7 @@ const ServiceSection = () => {
         axios.get(`${limitServices}`)
             .then((response) => setServices(response.data));
     }, []);
-    console.log(services);
+
     return (
         <div className='my-10 '>
             <div className='grid  lg:grid-cols-3 md:px-4  mx-auto lg:max-w-7xl md:items-center'>

@@ -1,24 +1,23 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { allReview } from '../../utilities/APIRoutes';
+import Review from './Review';
 
 
-const AllReview = () => {
+const AllReview = ({ reviews }) => {
 
-    const { review = [] } = useQuery({
-        queryKey: ['users'],
-        queryFn: async () => {
-            const res = await fetch(allReview);
-            const data = await res.json();
-            return data;
-        }
-    });
 
-    console.log(review);
 
     return (
-        <div>
+        <div >
+            <p className='border-b-4 inline-block pb-2 text-2xl font-bold'>Customer Reviews</p>
 
+            <div className='border-r pr-8'>
+                {
+                    reviews.map(review => <Review key={review._id} review={review} />)
+                }
+
+            </div>
         </div>
     );
 };
