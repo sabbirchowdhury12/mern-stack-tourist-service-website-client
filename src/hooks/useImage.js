@@ -26,7 +26,7 @@ const useImage = (file) => {
 
     }, [file]);
 
-    console.log(image);
+    // console.log(image);
     return image;
 
 };

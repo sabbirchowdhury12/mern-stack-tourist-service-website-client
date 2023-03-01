@@ -35,7 +35,7 @@ const AddService = () => {
 
         if (image) {
             await axios.post(addServices, service).then((result) => {
-                console.log(result);
+                // console.log(result);
                 if (result.data.acknowledged) {
                     toast.success('review addeed');
                     reset();

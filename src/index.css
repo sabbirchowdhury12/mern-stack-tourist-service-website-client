@@ -9,9 +9,25 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+
+
+h2 {
+  text-decoration-line: #029E9D;
+  text-decoration-line: #FDC703;
+  text-decoration-line: #263A49;
+  text-decoration-line: #777777;
+  text-decoration-line: #FFFFFF;
+  text-decoration-line: #17233e;
+  text-decoration-line: #029E9D;
+  text-decoration-line: #27334C;
+  text-decoration-line: #F32B42;
 }

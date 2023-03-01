@@ -32,9 +32,9 @@ const ServiceReviewSection = ({ service }) => {
     //submit a reviw
     const handleReview = async (data) => {
         const { name, email, country, comment } = data;
-        console.log(name, email, country, comment);
+        // console.log(name, email, country, comment);
         const image = user?.photoURL;
-        console.log(image);
+        // console.log(image);
 
         const review = {
             name,

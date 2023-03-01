@@ -14,42 +14,10 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import SingleSlide from './SingleSlide';
+import { slides } from '../../utilities/data';
 
 
-const slides = [
-    {
-        picture: img5,
-        subHeading: 'welcome',
-        heading: 'lorem ipsum',
-        description:
-            'loIpsum dolores ipsum est sanctus dolore. Justo ipsum magna sit sit sed et, elitr dolor tempor dolores eos invidunt sanctus.',
 
-    },
-    {
-        picture: img6,
-        subHeading: 'welcome',
-        heading: 'lorem ipsum',
-        description:
-            'loIpsum dolores ipsum est sanctus dolore. Justo ipsum magna sit sit sed et, elitr dolor tempor dolores eos invidunt sanctus.',
-
-    },
-    // {
-    //     picture: "https://insiderion.com/wp-content/uploads/2020/03/Mehjabin-Chowdhury-recent-photo.jpg",
-    //     subHeading: 'Amazing Places',
-    //     heading: 'Make Your Trip Fun & Noted',
-    //     description:
-    //         'Aperiam sociosqu urna praesent, tristique, corrupti condimentum asperiores platea ipsum ad arcu. Nostrud. Aut nostrum, ornare quas provident laoreet nesciunt.',
-    //     btnText: 'Get Started',
-    // },
-    // {
-    //     picture: "https://insiderion.com/wp-content/uploads/2020/03/Mehjabin-Chowdhury-recent-photo.jpg",
-    //     subHeading: 'Amazing Places',
-    //     heading: 'Make Your Trip Fun & Noted',
-    //     description:
-    //         'Aperiam sociosqu urna praesent, tristique, corrupti condimentum asperiores platea ipsum ad arcu. Nostrud. Aut nostrum, ornare quas provident laoreet nesciunt.',
-    //     btnText: 'Get Started',
-    // },
-];
 
 const Hero = () => {
 

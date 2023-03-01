@@ -8,3 +8,4 @@ export const myReview = `${host}/myReview`;
 export const deleteReview = `${host}/deleteReview`;
 export const updateReview = `${host}/updateReview`;
 export const addServices = `${host}/addService`;
+export const jwt = `${host}/jwt`;

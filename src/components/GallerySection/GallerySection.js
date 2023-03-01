@@ -1,8 +1,10 @@
 import React from 'react';
+import { headingStyle } from '../../utilities/data';
 
 const GallerySection = () => {
     return (
         <section className="overflow-hidden text-neutral-700 my-10">
+            <p className={`${headingStyle}`}>Galley - Photo from CLIENT'S</p>
             <div className="container px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                 <div className="-m-1 flex flex-wrap md:-m-2">
                     <div className="flex md:w-1/2 flex-wrap">

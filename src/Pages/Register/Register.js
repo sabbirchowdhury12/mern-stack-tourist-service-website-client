@@ -13,7 +13,7 @@ const Register = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [file, setFile] = useState(null);
     const image = useImage(file);
-    console.log(image);
+    // console.log(image);
     const navigate = useNavigate();
 
 
@@ -26,7 +26,7 @@ const Register = () => {
         if (image) {
             createUserWithEmail(email, password)
                 .then(result => {
-                    console.log(image);
+                    // console.log(image);
                     const userInfo = {
                         displayName: name,
                         photoURL: image
@@ -47,7 +47,7 @@ const Register = () => {
             <div className="w-full bg-grey-lightest pt-10">
                 <div className="container mx-auto py-8">
                     <div className="w-5/6 lg:w-1/2 mx-auto bg-white rounded shadow">
-                        <div className="py-4 px-8 text-black text-xl border-b border-grey-lighter">Register for a free account</div>
+                        <div className="py-4 px-8 text-black text-xl border-b border-grey-lighter font-bold">Register for a free account</div>
                         <form onSubmit={handleSubmit(handleSignUp)} className="py-4 px-8">
 
                             <div className="block md:flex  mb-4">
@@ -108,11 +108,7 @@ const Register = () => {
                 </div>
             </div>
 
-            <footer className="w-full bg-grey-lighter py-8">
-                <div className="container mx-auto text-center px-8">
-                    <p className="text-grey-dark mb-2 text-sm">This is a product of <span className="font-bold">Your Company</span></p>
-                </div>
-            </footer>
+
         </div>
     );
 };

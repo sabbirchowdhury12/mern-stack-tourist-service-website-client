@@ -16,10 +16,10 @@ const Navbar = () => {
             name: 'Home',
             path: '/'
         },
-        {
-            name: 'About',
-            path: '/blog'
-        },
+        // {
+        //     name: 'About',
+        //     path: '/blog'
+        // },
         {
             name: 'Blog',
             path: '/blog'
@@ -36,7 +36,7 @@ const Navbar = () => {
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
                         <Link to='/'>
-                            <h2 className="text-2xl font-bold">LOGO</h2>
+                            <h2 className="text-2xl font-bold uppercase">Travel.com</h2>
                         </Link>
                         <div className="md:hidden">
                             <button
@@ -105,7 +105,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                 </div>
-                <div className={`items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 pb-4  md:pb-0 font-bold text-xs ${navbar ? "block" : "hidden"
+                <div className={`items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 pb-4  md:pb-0 font-bold hover:text-primary ${navbar ? "block" : "hidden"
                     }`}>
                     {
                         user && user.uid ?

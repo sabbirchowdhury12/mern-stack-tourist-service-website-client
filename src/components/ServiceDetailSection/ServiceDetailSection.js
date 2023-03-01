@@ -42,7 +42,7 @@ const ServiceDetailSection = ({ service }) => {
                             <hr className="w-full  md:ml-0 mt-2  border " />
 
                             <div className="w-full mt-6 text-center ">
-                                <button className="bg-white hover:bg-grey-darker hover:text-white border border-solid border-grey w-1/3  py-2">Book now</button>
+                                <button className="btn btn-primary text-white">Book now</button>
                             </div>
 
                         </div>
